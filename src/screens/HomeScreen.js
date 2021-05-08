@@ -8,12 +8,19 @@ import {
   Image,
   ScrollView,
 } from 'react-native';
-import { default as tw } from 'tailwind-rn';
+import tw from 'tailwind-rn';
+import SampleContext from '../context/SampleContext';
 
 const HomeScreen = ({ navigation }) => {
+  const {
+    state: { is_loading },
+    setState,
+  } = useContext(SampleContext);
+
   return (
     <View style={tw('w-full h-full')}>
       <Text style={tw('font-bold')}>HomeScreen</Text>
+      {is_loading ? <Text>it's loading</Text> : null}
     </View>
   );
 };
