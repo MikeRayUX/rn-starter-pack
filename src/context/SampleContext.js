@@ -12,7 +12,7 @@ const sampleReducer = (state, action) => {
     case 'set_is_loading':
       return {
         ...state,
-        isLoading: action.payload,
+        is_loading: action.payload,
       };
     case 'set_flash':
       return {
@@ -47,7 +47,7 @@ export const SampleProvider = ({ children }) => {
   });
 
   const setState = (type, payload) => {
-    dispatch({ type, payload });
+    dispatch({ type: `set_${type}`, payload });
   };
 
   return (
