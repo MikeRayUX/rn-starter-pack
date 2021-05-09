@@ -1,34 +1,30 @@
 import React, { useEffect, useState, useContext, useRef } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import tw from 'tailwind-rn';
-import SampleContext from '../context/SampleContext';
 import { useNavigation } from '@react-navigation/native';
 import ScreenScrollContainer from '../components/ScreenContainers/ScreenScrollContainer';
 
 const HomeScreen = ({ navigation }) => {
-  const {
-    state: { is_loading },
-    setState,
-  } = useContext(SampleContext);
-
   return (
     <ScreenScrollContainer>
       <View style={tw('w-full bg-white border rounded border-gray-400 mb-4')}>
         <View style={tw('mb-4')}>
           <View style={tw('w-full p-2 rounded mb-2 bg-indigo-600')}>
-            <Text style={tw('text-white text-lg font-bold text-center')}>
+            <Text style={tw('text-white text-base font-black text-center')}>
               REACT NATIVE JUMPSTARTER{' '}
             </Text>
-            <Text style={tw('text-white text-base font-bold text-center')}>
+            <Text style={tw('text-white text-xs font-bold text-center')}>
               BY @MICHAELARRIAGA
             </Text>
           </View>
 
           <View style={tw('px-2')}>
-            <Text style={tw('text-base font-normal text-center mb-1')}>
-              This app contains several pre-built screens and components.
+            <Text style={tw('text-sm font-normal text-center mb-2')}>
+              This app contains several pre-built screens and components to make
+              getting a project going faster (hopefully) eliminating common
+              configuration and basic component creation.
             </Text>
-            <Text style={tw('text-base font-normal text-center mb-1')}>
+            <Text style={tw('text-sm font-bold text-center')}>
               Tap each link to view each screen.
             </Text>
           </View>
