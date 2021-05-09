@@ -5,6 +5,8 @@ import { useNavigation } from '@react-navigation/native';
 import ScreenScrollContainer from '../components/ScreenContainers/ScreenScrollContainer';
 
 const HomeScreen = ({ navigation }) => {
+  const [is_loading, setIsLoading] = useState(false);
+
   return (
     <ScreenScrollContainer>
       <View style={tw('w-full bg-white border rounded border-gray-400 mb-4')}>
