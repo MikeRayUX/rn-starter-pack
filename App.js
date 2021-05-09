@@ -18,8 +18,8 @@ const SessionsFlow = {
 const App = () => {
   return (
     <SampleProvider>
-      <NavigationContainer initialRouteName="AuthFlow">
-        <Stack.Navigator initialRouteName="Sessions">
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="Home">
           {Object.entries({ ...LandingFlow }).map(([route, screen]) => {
             return (
               <Stack.Screen
