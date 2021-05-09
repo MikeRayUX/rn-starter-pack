@@ -9,7 +9,7 @@ import {
   ScrollView,
 } from 'react-native';
 import tw from 'tailwind-rn';
-import SampleContext from '../../context/SampleContext';
+import SampleContext from '../context/SampleContext';
 import { useNavigation } from '@react-navigation/native';
 
 const HomeScreen = ({ navigation }) => {
@@ -36,7 +36,7 @@ const HomeScreen = ({ navigation }) => {
 
       <View style={tw('w-full flex justify-center items-center')}>
         <SectionHeader title="AuthFlow">
-          <Link destination="SessionsScreen" route="Home" />
+          <Link destination="SessionsScreen" route="Sessions" />
           <Link destination="RegistrationsScreen" route="Home" />
         </SectionHeader>
       </View>
@@ -44,11 +44,12 @@ const HomeScreen = ({ navigation }) => {
   );
 };
 
-export default HomeScreen;
-
 const SectionHeader = ({ title, children }) => {
   return (
-    <View style={tw('w-full flex justify-center items-center mb-2')}>
+    <View
+      key={title}
+      style={tw('w-full flex justify-center items-center mb-2')}
+    >
       <Text style={tw('font-bold text-xl text-center mb-2')}>{title}</Text>
       {children}
     </View>
@@ -76,3 +77,5 @@ const Link = ({ destination, route }) => {
     </TouchableOpacity>
   );
 };
+
+export default HomeScreen;
