@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext, useRef } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, StatusBar, TouchableOpacity } from 'react-native';
 import tw from 'tailwind-rn';
 import { useNavigation } from '@react-navigation/native';
 import ScreenScrollContainer from '../components/ScreenContainers/ScreenScrollContainer';
@@ -7,7 +7,8 @@ import ScreenScrollContainer from '../components/ScreenContainers/ScreenScrollCo
 const HomeScreen = ({ navigation }) => {
   return (
     <ScreenScrollContainer>
-      <View style={tw('w-full bg-white border rounded border-gray-400 mb-4')}>
+      <StatusBar barStyle="dark-content" backgroundColor="#ecf0f1" />
+      <View style={tw('w-full bg-white border rounded border-gray-400 my-6')}>
         <View style={tw('mb-4')}>
           <View style={tw('w-full p-2 rounded mb-2 bg-indigo-600')}>
             <Text style={tw('text-white text-base font-black text-center')}>
@@ -25,7 +26,7 @@ const HomeScreen = ({ navigation }) => {
               and providing several basic reusable components.
             </Text>
             <Text style={tw('text-sm font-bold text-center')}>
-              Tap each link to view each screen.
+              Tap each link to view each sample screen.
             </Text>
           </View>
         </View>
