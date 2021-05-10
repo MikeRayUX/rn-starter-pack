@@ -5,8 +5,6 @@ import { useNavigation } from '@react-navigation/native';
 import ScreenScrollContainer from '../components/ScreenContainers/ScreenScrollContainer';
 
 const HomeScreen = ({ navigation }) => {
-  const [is_loading, setIsLoading] = useState(false);
-
   return (
     <ScreenScrollContainer>
       <View style={tw('w-full bg-white border rounded border-gray-400 mb-4')}>
@@ -23,8 +21,8 @@ const HomeScreen = ({ navigation }) => {
           <View style={tw('px-2')}>
             <Text style={tw('text-sm font-normal text-center mb-2')}>
               This app contains several pre-built screens and components to make
-              getting a project going faster (hopefully) eliminating common
-              configuration and basic component creation.
+              getting a project going faster eliminating common configuration
+              and providing several basic reusable components.
             </Text>
             <Text style={tw('text-sm font-bold text-center')}>
               Tap each link to view each screen.
