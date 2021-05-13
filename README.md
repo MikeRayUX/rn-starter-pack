@@ -10,3 +10,9 @@
 4. Initialize a new git repository `git init`
 5. Create a new project on github
 6. Use standard remote repository setup instructions from github
+
+**Install packages and start project**
+
+1. Install expo command line tools `npm install --global expo-cli`
+2. Install project packages `npm install`
+3. Start expo `expo start`
