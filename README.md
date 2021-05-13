@@ -1,6 +1,6 @@
 ## React-Native starter pack by @MichaelArriaga
 
-#### This starter App contains several pre-built screens and components designed to make getting a project going faster, eliminating common configuration and providing several basic reusable components. Tap each link to view each screen.
+#### This starter App contains several pre-built screens and components designed to make getting a project going faster, eliminating common configuration and providing several basic reusable components.
 
 **To start a fresh project:**
 
